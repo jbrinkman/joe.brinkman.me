@@ -1,5 +1,5 @@
 #recipe Blog
-#theme CleanBlog
+#theme Striped
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "joe.brinkman.me";
