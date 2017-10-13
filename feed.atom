@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://joe.brinkman.me/" />
+	<id>http://joe.brinkman.me/</id>
+	<title>Joe Brinkman</title>
+	<rights>2017</rights>
+	<updated>2017-10-13T19:39:23Z</updated>
+	<subtitle>developer, technologist, entrepreneur, blogger, speaker, writer, accidental geek</subtitle>
+	<entry>
+		<link href="http://joe.brinkman.me/posts/a%20new%20beginning" />
+		<id>http://joe.brinkman.me/posts/a%20new%20beginning</id>
+		<title>The Accidental Geek: A New Beginning</title>
+		<updated>2017-10-01T00:00:00Z</updated>
+		<content>&lt;p&gt;In February 2003, I created a new website under the name &amp;quot;The Accidental Geek&amp;quot;. This site was built using a new web application framework called IBuySpy Workshop and was a place where I could blog about my technology passions. I never intended to become a geek, but I fell in love with electronics as a young kid, and later moved into programming as computers became more accessible. The name seemed to fit: and the domain was available.&lt;/p&gt;
+&lt;p&gt;As many of you know, IbuySpy Workshop became DotNetNuke, which later became DNN. When I started using IBuySpy Workshop, I immediately fell in love with the possibilities. Within just a couple months I quit my job and started a TAG Software, a development company focused on what was now called DotNetNuke.&lt;/p&gt;
+&lt;p&gt;For the next two years, I spent all my spare time contibuting code to the DotNetNuke project, some of which is still in DNN today. I was never really able to get TAG off the ground as I got sucked back into my previous company to help launch a new J2EE dev environment.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;In February 2003, I created a new website under the name "The Accidental Geek". This site was built using a new web application framework called IBuySpy Workshop and was a place where I could blog about my technology passions. I never intended to become a geek, but I fell in love with electronics as a young kid, and later moved into programming as computers became more accessible. The name seemed to fit: and the domain was available.&lt;/p&gt;</summary>
+	</entry>
+</feed>
