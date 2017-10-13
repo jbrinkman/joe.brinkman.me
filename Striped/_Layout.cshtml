@@ -1,3 +1,8 @@
+@{ 
+	string Title = Model.WithoutSettings.String(BlogKeys.Title); 
+	string PageTitle = Context.String(BlogKeys.Title) + (string.IsNullOrWhiteSpace(Title) ? string.Empty : " - " + Title);
+}
+
 <!DOCTYPE html>
 <!--
 	Striped by HTML5 UP
@@ -9,13 +14,34 @@
 		<title>@Model.WithoutSettings.String(BlogKeys.Title)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href='@Context.GetLink("/assets/css/main.css")' />
-		<!--[if lte IE 8]>
-            <link rel="stylesheet" href="assets/css/ie8.css" />
-        <![endif]-->
+		<!--[if lte IE 8]><script src="@Context.GetLink("assets/js/ie/html5shiv.js")"></script><![endif]-->
+		<link rel="stylesheet" href="@Context.GetLink("/assets/css/main.css")" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="@Context.GetLink("assets/css/ie8.css")" /><![endif]-->
+
+		<meta name="description" content="@Context.String(BlogKeys.Description)" />
+
+		@if (Context.String(BlogKeys.RssPath) != null) {
+		<link type="application/rss+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.RssPath))" />
+		}
+		@if (Context.String(BlogKeys.AtomPath) != null) {
+		<link type="application/atom+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.AtomPath))" />
+		}
+		<link rel="shortcut icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
+		<link rel="icon" href="@Context.GetLink("/favicon.ico")" type="image/x-icon">
+
+		<meta name="application-name" content="@Context.String(BlogKeys.Title)" />
+		<meta name="msapplication-tooltip" content="@Context.String(BlogKeys.Title)" />
+		<meta name="msapplication-starturl" content="@Context.GetLink("/")" />
+
+		<meta property="og:title" content="@PageTitle" /> 
+		@* <meta property="og:image" content="@Blog.Image" /> *@
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="@Context.GetLink(Model, true)" />
+
+        @Html.Partial("_Head")
 	</head>
     <body>
+@*
         @if(Context.String(BlogKeys.Description) != null)
         {
             <a href="@Context.GetLink("/")"><h1>@Context.String(BlogKeys.Description)</h1> </a>
@@ -29,30 +55,24 @@
             <span>@Context.String(BlogKeys.Intro)</span>
         }
 
-        @{
-            List<Tuple<string, string>> pages = Context
-                .Documents[Blog.Pages]
-                .Where(x => x.Bool(BlogKeys.ShowInNavbar, true))
-                .Where(x => x.FilePath(Keys.RelativeFilePath)?.FullPath?.StartsWith("index") == (bool?)false)
-                .Select(x => Tuple.Create(x.WithoutSettings.String(Keys.Title), Context.GetLink(x)))
-                .Where(x => !string.IsNullOrEmpty(x.Item1))
-                .OrderBy(x => x.Item1)
-                .ToList();
-            if(Documents[Blog.Tags].Any())
-            {
-                pages.Insert(0, Tuple.Create("Tags", Context.GetLink("tags/index.html")));
-            }
-            if(Documents[Blog.BlogPosts].Any() && Context.Bool(BlogKeys.GenerateArchive))
-            {
-                pages.Insert(0, Tuple.Create("Archive", Context.GetLink(Context.String(BlogKeys.PostsPath) + "/index.html")));
-            }
-            foreach(Tuple<string, string> page in pages)
-            {
-                <li><a href="@page.Item2">@page.Item1</a></li>
-            }
-        }
 
-        @RenderBody()
+*@
+        <!-- Content -->
+            <div id="content">
+                <div class="inner">
+                    @RenderBody()
+                </div>
+            </div>
+
+        <!-- Sidebar -->
+            @Html.Partial("_Sidebar")
+
+		<!-- Scripts -->
+			<script src="@Context.GetLink("assets/js/jquery.min.js")"></script>
+			<script src="@Context.GetLink("assets/js/skel.min.js")"></script>
+			<script src="@Context.GetLink("assets/js/util.js")"></script>
+			<!--[if lte IE 8]><script src="@Context.GetLink("assets/js/ie/respond.min.js")"></script><![endif]-->
+			<script src="@Context.GetLink("assets/js/main.js")"></script>
 
     </body>
 </html>

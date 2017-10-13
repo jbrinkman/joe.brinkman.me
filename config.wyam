@@ -3,7 +3,9 @@
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "joe.brinkman.me";
-Settings[BlogKeys.Title] = "Joe Brinkman - Developer, technologist, entrepreneur, blogger, speaker, writer, accidental geek";
-Settings[BlogKeys.Description] = "Developer, technologist, entrepreneur, blogger, speaker, writer, accidental geek";
+Settings[BlogKeys.Title] = "Joe Brinkman";
+Settings[BlogKeys.Description] = "developer, technologist, entrepreneur, blogger, speaker, writer, accidental geek";
+Settings[BlogKeys.IndexPageSize] = 2;
+Settings[BlogKeys.IndexPaging] = true;
 
 // Add any pipeline customizations here

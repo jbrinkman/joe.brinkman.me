@@ -1,0 +1,12 @@
+@model IDocument 
+<!-- Pagination -->
+    <div class="pagination">
+        @if(Model.Bool(Keys.HasPreviousPage))
+        {
+            <a href="@(Context.GetLink(Model.Document(Keys.PreviousPage)))" class="button previous">Newer</a>
+        }
+        @if(Model.Bool(Keys.HasNextPage))
+        {
+            <a href="@(Context.GetLink(Model.Document(Keys.NextPage)))" class="button next">Older</a>
+        }       
+    </div>
