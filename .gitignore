@@ -1,6 +1,7 @@
 /output
 packages.xml
 config.wyam.hash
+config.wyam.dll
 
 # Windows image file caches
 Thumbs.db
