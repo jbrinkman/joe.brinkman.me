@@ -44,6 +44,7 @@
                                 {
                                     pages.Insert(0, Tuple.Create("Tags", Context.GetLink("tags/index.html")));
                                 }
+								pages.Insert(0, Tuple.Create("Home", Context.GetLink("/")));
                                 foreach(Tuple<string, string> page in pages)
                                 {
                                     <li><a href="@page.Item2">@page.Item1</a></li>
