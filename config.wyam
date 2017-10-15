@@ -1,11 +1,13 @@
 #recipe Blog
-#theme Striped
+#theme CleanBlog
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "joe.brinkman.me";
 Settings[BlogKeys.Title] = "Joe Brinkman";
-Settings[BlogKeys.Description] = "entrepreneur, technologist, developer, blogger, speaker, writer, accidental geek";
+Settings[BlogKeys.Description] = "Joe Brinkman";
+Settings[BlogKeys.Intro] = "entrepreneur, technologist, developer, author, speaker, accidental geek";
 Settings[BlogKeys.IndexPageSize] = 5;
 Settings[BlogKeys.IndexPaging] = true;
+Settings[BlogKeys.Image] = "/assets/image/Header.png";
 
 // Add any pipeline customizations here
