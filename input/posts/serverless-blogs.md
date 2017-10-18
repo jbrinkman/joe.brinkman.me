@@ -35,11 +35,19 @@ A couple years ago, Phil Haack began [hosting his blog on GitHub](http://www.sho
 
 There are many great [static site generators](https://www.staticgen.com/) to choose from. I knew that there would be one that was just right for my purposes.
 
-The GitHub Pages feature that I would be leveraging to host my blog is nice. It includes full support for Jekyll, a very popular static site generator. Unfortunately, Jekyll is written in Ruby.  While that was not a deal killer, it added a bit of friction to getting started, and would potentially complicate things whenever I wanted to extend the platform. I have worked in many different programming languages, but Ruby is not one of them.
+The GitHub Pages feature that I would be leveraging to host my blog is nice. It includes full support for Jekyll, a very popular static site generator. Unfortunately, Jekyll is written in Ruby.  While that was not a deal killer, it added a bit of friction to getting started, and would potentially complicate things whenever I wanted to extend the platform. I had previous experience building a site in [Sphinx](http://www.sphinx-doc.org/en/stable/) and Python, and I learned the hard way that learning a new language and a new tool is a big task that complicates the site building process. I have worked in many different programming languages, but Ruby is not one of them so I wanted to avoid Jekyll for this project if I could.
 
 After exploring a handful of different static generators, I finally settled on [Wyam](http://wyam.io) as being the best fit for me. Not only is it written in .Net (C#), the project appears to be [actively maintained](https://github.com/Wyamio/Wyam) and the author is very responsive to [questions on Gitter](https://gitter.im/Wyamio/Wyam).
 
+Wyam is very similar to most generators I evaluated. It includes support for creating my own themes. In Wyam Themes are built using Razor Pages. This allows me to use all of my ASP.Net skills for hand-crafting my own custom theme. Although Wyam includes five different built-in themes out of the box, I much prefer to craft my own theme so that my site reflects my personal tastes.
+
+On the content side Wyam includes standard support for creating my pages with markdown. This makes it easy to create content without a lot of fuss. When I need a little more control over the final markup, I can always create my pages using Razor script. This gives me the full power of HTML and C# so I can get as fancy as I want for those few pages where the extra control may be necessary.
+
+All document generation in Wyam is the result of running a set of input files through a number of pre-written pipelines. These pipelines take the input files and generate the HTML, CSS and JavaScript for my final site. In Wyam these pipelines are called recipes. Out of the box there are recipes for Blogs, BookSites and Documentation Sites. With support for markdown, Razor, LESS, SASS, JSON and YAML, I have just about everything I need to create beautiful sites. Of course, if the built-in recipes don't suit my needs, I can easily craft my own or customize the pre-built recipes to suit my particular needs. If desired I could easily extend Wyam to include support for [Liquid markup](http://dotliquidmarkup.org/), add support for frontmatter written in XML or any number of interesting customizations. I am in complete control, and I don't have to make any changes to the core Wyam platform to make these enhancements. That is exactly the kind of control that I was looking for.
+
 # Just a Few Comments
+
+The heart of the blogging experience focuses on publishing articles. This is a task that any decent static site generator can handle with ease. But a blog is about more than just publishing articles. It is about engaging in a conversation with your readers. It is about expressing your views, sharing your knowledge and then interacting with your readers to get their viewpoint. Commenting then becomes the soul of your blog. It is where your ideas meet the real world and are challenged or confirmed.
 
 # Performance and Security
 
