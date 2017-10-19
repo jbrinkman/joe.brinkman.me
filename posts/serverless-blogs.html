@@ -1,0 +1,193 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>Joe Brinkman - Serverless Blogging</title>
+        <meta name="description" content="Joe Brinkman" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="Joe Brinkman" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="Joe Brinkman" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="Joe Brinkman" />
+        <meta name="msapplication-tooltip" content="Joe Brinkman" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="Joe Brinkman - Serverless Blogging" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://joe.brinkman.me/posts/serverless-blogs" />
+        <!-- TODO: More social graph meta tags -->
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>     
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/Please-compressed.js"></script>
+        <script src="/assets/js/background-check.min.js"></script>
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">Joe Brinkman</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/posts">Archive</a></li>
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/about">About Me</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/assets/image/Header.png&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Serverless Blogging</h1>
+    <div class="meta">        
+Published on Tuesday, October 17, 2017<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/Blog" class="btn btn-default btn-xs">Blog</a>
+                    <a role="button" href="/tags/GitHub" class="btn btn-default btn-xs">GitHub</a>
+                    <a role="button" href="/tags/Serverless" class="btn btn-default btn-xs">Serverless</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<h1 id="overview">Overview</h1>
+<p>Serverless computing is all the rage today. Services like AWS Lambda and Azure Functions allow you to build applications without worrying about where your code runs or when to scale up and down the resources for your application. While there is a server somewhere that is running your code, you don't have to worry about it.  All of the server management details are handled for you and you can focus your effort on just your code.</p>
+<h1 id="evaluating-my-options">Evaluating My Options</h1>
+<p>As I was evaluating different blogging options I shortlisted the features I wanted:</p>
+<ol>
+<li>Blogging - must support blogging (posting, commenting, RSS)</li>
+<li>Full Control - can change any aspect I choose</li>
+<li>Low maintenance - operates with little to no intervention</li>
+<li>Lightweight - doesn't have hundreds of unneeded features</li>
+<li>Flexible - the system could be extended if needed. Bonus points if I had the knowledge to create extensions.</li>
+<li>Scalable - should be easy to host and handle almost unlimited load</li>
+</ol>
+<p>In evaluating systems I looked at three different types of systems. CMS platforms like DNN, Drupal and Wordpress are generally very flexible and scalable systems that could easily handle my blogging needs. The one area where these tools fall short is that they all have hundreds of features that overkill if you are just looking for a blog. Each of these features steals CPU cycles and creates a potential security risk. This results in needing higher end hosting resources which means I would be spending more time on maintaining the system rather than focusing on the blog. As anyone who has ever had to drop everything to upgrade their site due to a security issue knows, this is not an insignificant issue.</p>
+<p>The second set of systems I looked at are dedicated blogging platforms. In recent years, the number of blogging platforms has been shrinking. The only real option that I see today is Ghost or Medium. While both of these are well established options I didn't feel that I would have the necessary control if I went with Medium and I felt like the maintenance costs for Ghost would still be a bit high.</p>
+<p>The final set of systems I considered were static site generators. Site generators are interesting to me since they ultimately just aid in creating static HTML sites. HTML sites are about as scalable as you can get since all of the content can be cached and there is no server processing needed to serve the content. With some of the hosting options available, I could serve up the site for almost no cost. Most of the site generators I evaluated supported extensible generation pipelines and some sort of markdown or scripting language for controlling the visual aspects of the site.</p>
+<p>The site generation option ticked off every feature on my wish list.</p>
+<h1 id="picking-a-site-generator">Picking a Site Generator</h1>
+<p>A couple years ago, Phil Haack began <a href="http://www.shopsmith.com/ownersite/catalog/l_univlathetoolrest.htm">hosting his blog on GitHub</a>. This really intrigued me. By hosting on GitHub, Phil completely eliminated his maintenance efforts. GitHub serves up millions of pageviews every day so my few page views won't even be noticed. Even a twitter mention by <a href="https://www.hanselman.com/">Scott Hanselman</a> won't be enough to swamp my blog with traffic. GitHub definitely looked like a good, albeit unusual, hosting option. And it is totally free which means that the wife acceptance factor is very high.</p>
+<p>There are many great <a href="https://www.staticgen.com/">static site generators</a> to choose from. I knew that there would be one that was just right for my purposes.</p>
+<p>The GitHub Pages feature that I would be leveraging to host my blog is nice. It includes full support for Jekyll, a very popular static site generator. Unfortunately, Jekyll is written in Ruby.  While that was not a deal killer, it added a bit of friction to getting started, and would potentially complicate things whenever I wanted to extend the platform. I had previous experience building a site in <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> and Python, and I learned the hard way that learning a new language and a new tool is a big task that complicates the site building process. I have worked in many different programming languages, but Ruby is not one of them so I wanted to avoid Jekyll for this project if I could.</p>
+<p>After exploring a handful of different static generators, I finally settled on <a href="http://wyam.io">Wyam</a> as being the best fit for me. Not only is it written in .Net (C#), the project appears to be <a href="https://github.com/Wyamio/Wyam">actively maintained</a> and the author is very responsive to <a href="https://gitter.im/Wyamio/Wyam">questions on Gitter</a>.</p>
+<p>Wyam is very similar to most generators I evaluated. It includes support for creating my own themes. In Wyam Themes are built using Razor Pages. This allows me to use all of my ASP.Net skills for hand-crafting my own custom theme. Although Wyam includes five different built-in themes out of the box, I much prefer to craft my own theme so that my site reflects my personal tastes.</p>
+<p>On the content side Wyam includes standard support for creating my pages with markdown. This makes it easy to create content without a lot of fuss. When I need a little more control over the final markup, I can always create my pages using Razor script. This gives me the full power of HTML and C# so I can get as fancy as I want for those few pages where the extra control may be necessary.</p>
+<p>All document generation in Wyam is the result of running a set of input files through a number of pre-written pipelines. These pipelines take the input files and generate the HTML, CSS and JavaScript for my final site. In Wyam these pipelines are called recipes. Out of the box there are recipes for Blogs, BookSites and Documentation Sites. With support for markdown, Razor, LESS, SASS, JSON and YAML, I have just about everything I need to create beautiful sites. Of course, if the built-in recipes don't suit my needs, I can easily craft my own or customize the pre-built recipes to suit my particular needs. If desired I could easily extend Wyam to include support for <a href="http://dotliquidmarkup.org/">Liquid markup</a>, add support for frontmatter written in XML or any number of interesting customizations. I am in complete control, and I don't have to make any changes to the core Wyam platform to make these enhancements. That is exactly the kind of control that I was looking for.</p>
+<h1 id="just-a-few-comments">Just a Few Comments</h1>
+<p>The heart of the blogging experience focuses on publishing articles. This is a task that any decent static site generator can handle with ease. But a blog is about more than just publishing articles. It is about engaging in a conversation with your readers. It is about expressing your views, sharing your knowledge and then interacting with your readers to get their viewpoint. Commenting then becomes the soul of your blog. It is where your ideas meet the real world and are challenged or confirmed.</p>
+<p>Ten years ago, commenting systems were fully integrated into blogging platforms. If you didn't like the comment management features of your blog platform, then your only option was to change platforms. Today there are a number of great commenting options for blogs.</p>
+<p>Disqus and Facebook are two of the largest commenting systems out there. They are easy to integrate and they can handle whatever load you throw at them. I like both of these options but whatever reason, they just didn't resonate with me.</p>
+<p>When I looked at Utteranc.es, I was intrigued. Utteranc.es uses the GitHub API to integrate the GitHub issue comment system into your blog. When the first comment is posted to a specific post, Utteranc.es creates a new issue in your predefined GitHub repository, and adds the comment to the issue. Each blog post will have an associated GitHub issue. Since I was planning to use GitHub to host my site source code and to serve up the blog from GitHub pages, it just seemed a natural fit to also use GitHub for hosting the comments for the blog. And as an added bonus, it is completely free.</p>
+<h1 id="performance-and-security">Performance and Security</h1>
+<p>In today's web environment it is important to consider the performance and security aspects of running your site. Since GitHub is handling all of the hosting duties for my site, I am fairly confident that I won't have any issues with scaling. One of the downsides of using GitHub for hosting my blog is that GitHub does not offer SSL suport for serving GitHub pages with a custom domain. Fortunately, this is easily remedied by using CloudFlare. Not only will this add SSL support, but it also means that all of my content is served from a CDN. Other than comments, the site is purely static content so I can be very aggressive with caching. The comments are loaded using JavaScript so it should be unaffected by the caching. CloudFlare offers a lot of additional features, but for basic CDN and SSL needs CloudFlare offers a free plan for non-commercial use.</p>
+<h1 id="wrapping-it-up">Wrapping it Up</h1>
+<p>I don't know how many servers are involved in running my site, and honestly I don't really care, and really that is the whole point of serverless computing. I can focus on writing my blog without worrying about any of the hosting concerns. This blogging approach is not for everyone. Wyam, GitHub, Utteranc.es and CloudFlare are not going to suddenly supplant WordPress as the leading blogging platform. I am just getting started with this new system and I expect that in time I will find new features that I would like to add to my site. I am confident that Wyam is flexible enough to grow with my needs. And the best part of this whole configuration is that I am able to run a secure, high performance blog site for free.</p>
+
+
+<script src="https://utteranc.es/client.js"
+        repo="jbrinkman/joe.brinkman.me"
+        branch="master"
+        issue-term="pathname"
+        async>
+</script>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright text-muted">
+                        Copyright © 2017
+                        <br />
+                            <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                        |
+                            <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                    </p>
+                </div>
+        </div>
+</div>
+
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+
+                <script>
+                        BackgroundCheck.init({
+                                targets: '.intro-header,.navbar',
+                                images: '.intro-header'
+                        });
+                </script>
+        </body>
+</html>
+
