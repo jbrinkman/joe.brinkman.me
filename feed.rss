@@ -5,15 +5,15 @@
 		<link>http://joe.brinkman.me/</link>
 		<description>Joe Brinkman</description>
 		<copyright>2017</copyright>
-		<pubDate>Thu, 19 Oct 2017 05:54:34 GMT</pubDate>
-		<lastBuildDate>Thu, 19 Oct 2017 05:54:34 GMT</lastBuildDate>
+		<pubDate>Thu, 19 Oct 2017 05:57:42 GMT</pubDate>
+		<lastBuildDate>Thu, 19 Oct 2017 05:57:42 GMT</lastBuildDate>
 		<item>
 			<title>Serverless Blogging</title>
 			<link>http://joe.brinkman.me/posts/serverless-blogs</link>
 			<description>&lt;p&gt;Serverless computing is all the rage today. Services like AWS Lambda and Azure Functions allow you to build applications without worrying about where your code runs or when to scale up and down the resources for your application. While there is a server somewhere that is running your code, you don't have to worry about it.  All of the server management details are handled for you and you can focus your effort on just your code.&lt;/p&gt;</description>
 			<enclosure url="http://joe.brinkman.me/assets/image/Header.png" length="0" type="image" />
 			<guid>http://joe.brinkman.me/posts/serverless-blogs</guid>
-			<pubDate>Tue, 17 Oct 2017 00:00:00 GMT</pubDate>
+			<pubDate>Wed, 18 Oct 2017 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;h1 id="overview"&gt;Overview&lt;/h1&gt;
 &lt;p&gt;Serverless computing is all the rage today. Services like AWS Lambda and Azure Functions allow you to build applications without worrying about where your code runs or when to scale up and down the resources for your application. While there is a server somewhere that is running your code, you don't have to worry about it.  All of the server management details are handled for you and you can focus your effort on just your code.&lt;/p&gt;
 &lt;h1 id="evaluating-my-options"&gt;Evaluating My Options&lt;/h1&gt;
