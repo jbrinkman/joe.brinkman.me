@@ -49,6 +49,16 @@ All document generation in Wyam is the result of running a set of input files th
 
 The heart of the blogging experience focuses on publishing articles. This is a task that any decent static site generator can handle with ease. But a blog is about more than just publishing articles. It is about engaging in a conversation with your readers. It is about expressing your views, sharing your knowledge and then interacting with your readers to get their viewpoint. Commenting then becomes the soul of your blog. It is where your ideas meet the real world and are challenged or confirmed.
 
+Ten years ago, commenting systems were fully integrated into blogging platforms. If you didn't like the comment management features of your blog platform, then your only option was to change platforms. Today there are a number of great commenting options for blogs.
+
+Disqus and Facebook are two of the largest commenting systems out there. They are easy to integrate and they can handle whatever load you throw at them. I like both of these options but whatever reason, they just didn't resonate with me.
+
+When I looked at Utteranc.es, I was intrigued. Utteranc.es uses the GitHub API to integrate the GitHub issue comment system into your blog. When the first comment is posted to a specific post, Utteranc.es creates a new issue in your predefined GitHub repository, and adds the comment to the issue. Each blog post will have an associated GitHub issue. Since I was planning to use GitHub to host my site source code and to serve up the blog from GitHub pages, it just seemed a natural fit to also use GitHub for hosting the comments for the blog. And as an added bonus, it is completely free.
+
 # Performance and Security
 
+In today's web environment it is important to consider the performance and security aspects of running your site. Since GitHub is handling all of the hosting duties for my site, I am fairly confident that I won't have any issues with scaling. One of the downsides of using GitHub for hosting my blog is that GitHub does not offer SSL suport for serving GitHub pages with a custom domain. Fortunately, this is easily remedied by using CloudFlare. Not only will this add SSL support, but it also means that all of my content is served from a CDN. Other than comments, the site is purely static content so I can be very aggressive with caching. The comments are loaded using JavaScript so it should be unaffected by the caching. CloudFlare offers a lot of additional features, but for basic CDN and SSL needs CloudFlare offers a free plan for non-commercial use.
+
 # Wrapping it Up
+
+I don't know how many servers are involved in running my site, and honestly I don't really care, and really that is the whole point of serverless computing. I can focus on writing my blog without worrying about any of the hosting concerns. This blogging approach is not for everyone. Wyam, GitHub, Utteranc.es and CloudFlare are not going to suddenly supplant WordPress as the leading blogging platform. I am just getting started with this new system and I expect that in time I will find new features that I would like to add to my site. I am confident that Wyam is flexible enough to grow with my needs. And the best part of this whole configuration is that I am able to run a secure, high performance blog site for free.
