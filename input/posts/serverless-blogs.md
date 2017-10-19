@@ -1,7 +1,7 @@
 ---
 {
     Title: "Serverless Blogging",
-    Published: "10/17/2017",
+    Published: "10/18/2017",
     Tags: ["Blog","Serverless","GitHub"]
 }
 ---
