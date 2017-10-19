@@ -6,11 +6,11 @@
 }
 ---
 
-# Overview
+## Overview
 
 Serverless computing is all the rage today. Services like AWS Lambda and Azure Functions allow you to build applications without worrying about where your code runs or when to scale up and down the resources for your application. While there is a server somewhere that is running your code, you don't have to worry about it.  All of the server management details are handled for you and you can focus your effort on just your code.
 
-# Evaluating My Options
+## Evaluating My Options
 
 As I was evaluating different blogging options I shortlisted the features I wanted:
 
@@ -29,7 +29,7 @@ The final set of systems I considered were static site generators. Site generato
 
 The site generation option ticked off every feature on my wish list.
 
-# Picking a Site Generator
+## Picking a Site Generator
 
 A couple years ago, Phil Haack began [hosting his blog on GitHub](http://www.shopsmith.com/ownersite/catalog/l_univlathetoolrest.htm). This really intrigued me. By hosting on GitHub, Phil completely eliminated his maintenance efforts. GitHub serves up millions of pageviews every day so my few page views won't even be noticed. Even a twitter mention by [Scott Hanselman](https://www.hanselman.com/) won't be enough to swamp my blog with traffic. GitHub definitely looked like a good, albeit unusual, hosting option. And it is totally free which means that the wife acceptance factor is very high.
 
@@ -45,7 +45,7 @@ On the content side Wyam includes standard support for creating my pages with ma
 
 All document generation in Wyam is the result of running a set of input files through a number of pre-written pipelines. These pipelines take the input files and generate the HTML, CSS and JavaScript for my final site. In Wyam these pipelines are called recipes. Out of the box there are recipes for Blogs, BookSites and Documentation Sites. With support for markdown, Razor, LESS, SASS, JSON and YAML, I have just about everything I need to create beautiful sites. Of course, if the built-in recipes don't suit my needs, I can easily craft my own or customize the pre-built recipes to suit my particular needs. If desired I could easily extend Wyam to include support for [Liquid markup](http://dotliquidmarkup.org/), add support for frontmatter written in XML or any number of interesting customizations. I am in complete control, and I don't have to make any changes to the core Wyam platform to make these enhancements. That is exactly the kind of control that I was looking for.
 
-# Just a Few Comments
+## Just a Few Comments
 
 The heart of the blogging experience focuses on publishing articles. This is a task that any decent static site generator can handle with ease. But a blog is about more than just publishing articles. It is about engaging in a conversation with your readers. It is about expressing your views, sharing your knowledge and then interacting with your readers to get their viewpoint. Commenting then becomes the soul of your blog. It is where your ideas meet the real world and are challenged or confirmed.
 
@@ -55,14 +55,14 @@ Disqus and Facebook are two of the largest commenting systems out there. They ar
 
 When I looked at Utteranc.es, I was intrigued. Utteranc.es uses the GitHub API to integrate the GitHub issue comment system into your blog. When the first comment is posted to a specific post, Utteranc.es creates a new issue in your predefined GitHub repository, and adds the comment to the issue. Each blog post will have an associated GitHub issue. Since I was planning to use GitHub to host my site source code and to serve up the blog from GitHub pages, it just seemed a natural fit to also use GitHub for hosting the comments for the blog. And as an added bonus, it is completely free.
 
-# Performance and Security
+## Performance and Security
 
 In today's web environment it is important to consider the performance and security aspects of running your site. Since GitHub is handling all of the hosting duties for my site, I am fairly confident that I won't have any issues with scaling. One of the downsides of using GitHub for hosting my blog is that GitHub does not offer SSL suport for serving GitHub pages with a custom domain. Fortunately, this is easily remedied by using CloudFlare. Not only will this add SSL support, but it also means that all of my content is served from a CDN. Other than comments, the site is purely static content so I can be very aggressive with caching. The comments are loaded using JavaScript so it should be unaffected by the caching. CloudFlare offers a lot of additional features, but for basic CDN and SSL needs CloudFlare offers a free plan for non-commercial use.
 
-# Publishing
+## Publishing
 
 Since Wyam is a static site generator, I will need to run Wyam after every blog post is completed. That complicate the process of publishing my blog. Fortunately for me, there are many continuous integration systems that integrate with GitHub. Many of the most popular CI systems run on Linux and won't work for this project. AppVeyor is a popular CI tool that works great for .Net projects. Wyam has great documentation showing how to [use AppVeyor with Wyam and GitHub](https://wyam.io/docs/deployment/appveyor). As you might have guessed, AppVeyor has a free plan that works well for my needs.
 
-# Wrapping it Up
+## Wrapping it Up
 
 I don't know how many servers are involved in running my site, and honestly I don't really care, and really that is the whole point of serverless computing. I can focus on writing my blog without worrying about any of the hosting concerns. This blogging approach is not for everyone. Wyam, GitHub, Utteranc.es, AppVeyor and CloudFlare are not going to suddenly supplant WordPress as the leading blogging platform. I am just getting started with this new system and I expect that in time I will find new features that I would like to add to my site. I am confident that Wyam is flexible enough to grow with my needs. And the best part of this whole configuration is that I am able to run a secure, high performance blog site for free.
