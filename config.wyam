@@ -3,6 +3,7 @@
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "joe.brinkman.me";
+Settings[Keys.LinksUseHttps] = true;
 Settings[BlogKeys.Title] = "Joe Brinkman";
 Settings[BlogKeys.Description] = "Joe Brinkman";
 Settings[BlogKeys.Intro] = "entrepreneur, technologist, developer, author, speaker, accidental geek";
