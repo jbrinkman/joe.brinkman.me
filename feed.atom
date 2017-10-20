@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="http://joe.brinkman.me/" />
-	<id>http://joe.brinkman.me/</id>
+	<link rel="self" href="https://joe.brinkman.me/" />
+	<id>https://joe.brinkman.me/</id>
 	<title>Joe Brinkman</title>
 	<rights>2017</rights>
-	<updated>2017-10-19T06:02:59Z</updated>
-	<logo>http://joe.brinkman.me/assets/image/Header.png</logo>
+	<updated>2017-10-20T17:11:50Z</updated>
+	<logo>https://joe.brinkman.me/assets/image/Header.png</logo>
 	<subtitle>Joe Brinkman</subtitle>
 	<entry>
-		<link href="http://joe.brinkman.me/posts/serverless-blogs" />
-		<link rel="enclosure" type="image" href="http://joe.brinkman.me/assets/image/Header.png" />
-		<id>http://joe.brinkman.me/posts/serverless-blogs</id>
+		<link href="https://joe.brinkman.me/posts/serverless-blogs" />
+		<link rel="enclosure" type="image" href="https://joe.brinkman.me/assets/image/Header.png" />
+		<id>https://joe.brinkman.me/posts/serverless-blogs</id>
 		<title>Serverless Blogging</title>
 		<updated>2017-10-18T00:00:00Z</updated>
 		<content>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
@@ -52,9 +52,9 @@
 		<summary>&lt;p&gt;Serverless computing is all the rage today. Services like AWS Lambda and Azure Functions allow you to build applications without worrying about where your code runs or when to scale up and down the resources for your application. While there is a server somewhere that is running your code, you don't have to worry about it.  All of the server management details are handled for you and you can focus your effort on just your code.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<link href="http://joe.brinkman.me/posts/a-new-beginning" />
-		<link rel="enclosure" type="image" href="http://joe.brinkman.me/assets/image/Header.png" />
-		<id>http://joe.brinkman.me/posts/a-new-beginning</id>
+		<link href="https://joe.brinkman.me/posts/a-new-beginning" />
+		<link rel="enclosure" type="image" href="https://joe.brinkman.me/assets/image/Header.png" />
+		<id>https://joe.brinkman.me/posts/a-new-beginning</id>
 		<title>The Accidental Geek: A New Beginning</title>
 		<updated>2017-10-14T00:00:00Z</updated>
 		<content>&lt;p&gt;In February 2003, I created a new website under the name &amp;quot;The Accidental Geek&amp;quot;. This site was built using a new web application framework called IBuySpy Workshop and was a place where I could blog about my technology passions. I never intended to become a geek, but I fell in love with electronics as a young kid, and later moved into programming as computers became more accessible. The name seemed to fit: and the domain was available.&lt;/p&gt;
