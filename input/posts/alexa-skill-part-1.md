@@ -44,4 +44,20 @@ The heart of a voice application resides in the application layer (layer #2). Th
 
 The voice engine sends a message to the application layer for different application lifecycle events like launch or session end. In addition the engine will call the application when an utterance is matched to an intent. The application is responsible for either starting a dialog interaction to request additional information from the user or fulfilling the intent request. How the application processes each request is completely within the applications control.
 
-Since the application layer is just a web-service that can receive requests from the voice engine, it can be created using any programming language, framework or service that is capable of exposing an appropriate service endpoint.
+Since the application layer is just a web-service that can receive requests from the voice engine, it can be created using any programming language, framework or service that is capable of exposing an appropriate endpoint. Due to the nature and small size of most voice applications, they are easily hosted using serverless systems like AWS Lambda or Azure Functions. While you do not need to use AWS or Azure for hosting your application, those services do offer additional features specifically tailored to running application code for the associated voice engine.
+
+### Backend Services
+
+Most voice applications will have a lightweight application layer and will call various backend services and systems (layer #3) for performing the actual work or accessing application data. Often, the application layer just becomes a translation layer or façade for relaying commands from the voice engine to some pre-existing service API(s). In the example application that goes with this series the service layer will be handled by Evoq Liquid Content. As a result, building this layer will be strictly a matter of gaining access to the API via an appropriately scoped API key.
+
+## Think Differently
+
+One of the primary challenges in writing voice applications is in understanding that verbal communication is very different from writing traditional GUI applications. Developers have spent the last 30 years building visually rich application interfaces. We've incorporated sound and color and motion into our user experiences which helps evoke just the right emotion as users navigate through our applications and websites. The world of VUI applications is very different. It is like going from gigabit Ethernet to a 14.4k modem. In the dialup world, every byte traveling across the wire takes on that much more importance.
+
+We've all heard the saying "a picture is worth a thousand words", unfortunately for developers of voice applications the human brain has a very small amount of short term memory. In the VUI world, we have to define our application to present the user with just a few choices or a few pieces of information at one time. If you present too much information at one time, the user will suffer from information overload and won't be able to recall the first portion of the information you provided. It is critical that we design our interface to present information in small, bite sized chunks and that we prioritize the information so the most important information is presented first.
+
+Since we can't present the user with all of the information that may be available, voice applications must build in methods to allow users to get the next "chunk" of data or to get help on what other options might be available. You see this quite often in voicemail systems which offer prompts like "press 5 for additional options". Rarely will a voice mail system provide 9 different choices for a user, because long before you read the 9th option, the user will have forgotten what options one, two or three were.
+
+## Putting It All Together
+
+What should be apparent at this point is that voice applications are not just a single system. It will involve some configuration, and some application development. This is readily apparent when building an Alexa Skill as even the most trivial skill will require accessing two different Amazon developer portals: one for the [AWS Skill configuration](https://developer.amazon.com/edw/home.html#/skills), and one for [hosting your application code](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions). 
