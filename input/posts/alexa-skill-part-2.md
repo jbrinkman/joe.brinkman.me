@@ -2,7 +2,7 @@
 {
     Title: "Can You Hear Me Now? Part 2",
     Lead: "Building Your First Voice Application with Alexa, C# and Evoq Liquid Content",
-    Published: "10/30/2017",
+    Published: "11/07/2017",
     Tags: ["Alexa","AWS","AWS Lambda","DNN","EVOQ"],
     Image: ""
 }
