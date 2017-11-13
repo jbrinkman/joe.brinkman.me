@@ -25,7 +25,7 @@ In this series I'll provide some background on the current state of the industry
 
 The way we interact with computers has changed dramatically in the last 50 years. Each advancement seeks to make the interaction more closely resemble human to human interaction. The latest innovation in machine-human interaction was the creation of a mass market device that was built around a [VUI](https://en.wikipedia.org/wiki/Voice_user_interface). Amazon Echo is a revolutionary product that popularized the current trend around "smart speakers", and also created an entire ecosystem around the development of voice applications.
 
-![Voice Application architecture](/assets/image/alexa-skill/alexa-skill-architecture.png){.pull-left .img-small}
+![Voice Application architecture](/assets/image/Alexa-Skill/Alexa-Skill-Architecture.png){.pull-left .img-small}
 Voice applications are multi-layered systems that define the interactions and behaviors of an application designed for use where voice is the primary user interaction paradigm. Voice applications are distinct from the traditional application model that relies on visual elements to convey information to users. This high-level architecture is used in the three major voice application platforms (Amazon Alexa, Google Assistant and Microsoft Cortana).
 
 One of the unique aspects of voice application architecture is that the VUI is defined and hosted by the platform vendor without any coding required, while the application logic can be hosted anywhere. This architecture is the epitome of a microservices based architecture.
