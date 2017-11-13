@@ -5,8 +5,8 @@
 		<link>https://joe.brinkman.me/</link>
 		<description>Joe Brinkman</description>
 		<copyright>2017</copyright>
-		<pubDate>Fri, 10 Nov 2017 21:17:32 GMT</pubDate>
-		<lastBuildDate>Fri, 10 Nov 2017 21:17:32 GMT</lastBuildDate>
+		<pubDate>Mon, 13 Nov 2017 17:13:28 GMT</pubDate>
+		<lastBuildDate>Mon, 13 Nov 2017 17:13:28 GMT</lastBuildDate>
 		<item>
 			<title>Can You Hear Me Now? Part 1</title>
 			<link>https://joe.brinkman.me/posts/alexa-skill-part-1</link>
@@ -24,7 +24,7 @@
 &lt;/ul&gt;
 &lt;h2 id="voice-applications"&gt;Voice Applications&lt;/h2&gt;
 &lt;p&gt;The way we interact with computers has changed dramatically in the last 50 years. Each advancement seeks to make the interaction more closely resemble human to human interaction. The latest innovation in machine-human interaction was the creation of a mass market device that was built around a &lt;a href="https://en.wikipedia.org/wiki/Voice_user_interface"&gt;&lt;abbr title="Voice User Interface"&gt;VUI&lt;/abbr&gt;&lt;/a&gt;. Amazon Echo is a revolutionary product that popularized the current trend around &amp;quot;smart speakers&amp;quot;, and also created an entire ecosystem around the development of voice applications.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/image/alexa-skill/alexa-skill-architecture.png" class="pull-left img-small img-fluid" alt="Voice Application architecture" /&gt;
+&lt;p&gt;&lt;img src="/assets/image/Alexa-Skill/Alexa-Skill-Architecture.png" class="pull-left img-small img-fluid" alt="Voice Application architecture" /&gt;
 Voice applications are multi-layered systems that define the interactions and behaviors of an application designed for use where voice is the primary user interaction paradigm. Voice applications are distinct from the traditional application model that relies on visual elements to convey information to users. This high-level architecture is used in the three major voice application platforms (Amazon Alexa, Google Assistant and Microsoft Cortana).&lt;/p&gt;
 &lt;p&gt;One of the unique aspects of voice application architecture is that the &lt;abbr title="Voice User Interface"&gt;VUI&lt;/abbr&gt; is defined and hosted by the platform vendor without any coding required, while the application logic can be hosted anywhere. This architecture is the epitome of a microservices based architecture.&lt;/p&gt;
 &lt;h3 id="voice-engine"&gt;Voice Engine&lt;/h3&gt;
